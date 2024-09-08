@@ -8,18 +8,22 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>CRUD</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1 class="text-center mb-4" >Data Pegawai</h1>
 
-    <table class="table">
+    <div class="container">
+    <button type="button" class="btn btn-success">Tambah</button>
+        <div class="row">
+        <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nama</th>
+      <th scope="col">Jenis Kelamin</th>
+      <th scope="col">No Telepon</th>
+      <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>
@@ -28,20 +32,15 @@
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>
+        <button type="button" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn btn-info">Edit</button>
+      </td>
     </tr>
   </tbody>
 </table>
+        </div>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
