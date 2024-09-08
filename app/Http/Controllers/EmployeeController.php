@@ -11,5 +11,7 @@ class EmployeeController extends Controller
         $data = Employee::all();
         return view('datapegawai', compact('data'));
     }
-    
+    public function tambahpegawai(){
+        return view('tambahdata');
+    }
 }
