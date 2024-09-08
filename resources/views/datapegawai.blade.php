@@ -27,16 +27,21 @@
     </tr>
   </thead>
   <tbody>
+    @foreach ($data as $row)
+
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">{{ $row->id }}</th>
+      <td>{{ $row->nama }}</td>
+      <td>{{ $row->jeniskelamin }}</td>
+      <td>{{ $row->notelpon }}</td>
       <td>
         <button type="button" class="btn btn-danger">Delete</button>
         <button type="button" class="btn btn-info">Edit</button>
       </td>
     </tr>
+
+    @endforeach
+    
   </tbody>
 </table>
         </div>

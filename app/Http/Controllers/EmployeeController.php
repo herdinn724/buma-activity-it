@@ -9,8 +9,7 @@ class EmployeeController extends Controller
 {
     public function index(){
         $data = Employee::all();
-        dd($data);
-        return view('datapegawai');
+        return view('datapegawai', compact('data'));
     }
     
 }
