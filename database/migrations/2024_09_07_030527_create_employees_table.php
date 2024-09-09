@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->enum('jeniskelamin', ['cowo','cewe']);
+            $table->enum('jeniskelamin', ['PMCheck','Troubleshooting','Instalasi','Repair','Event','Perjalanan Pulang']);
             $table->biginteger('notelpon');
             $table->timestamps();
         });

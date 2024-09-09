@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>CRUD</title>
+    <title>Daily Activity IT</title>
   </head>
   <body>
     <h1 class="text-center mb-4" >Edit Data Pegawai</h1>
@@ -28,8 +28,12 @@
                 <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
                 <select class="form-select" name="jeniskelamin" aria-label="Default select example">
                   <option selected>{{ $data->jeniskelamin }}</option>
-                  <option value="Cowo">Cowo</option>
-                  <option value="Cewe">Cewe</option>
+                  <option value="PM Check">PM Check</option>
+                  <option value="Troubleshooting">Troubleshooting</option>
+                  <option value="Instalasi">Instalasi</option>
+                  <option value="Repair">Repair</option>
+                  <option value="Event">Event</option>
+                  <option value="Perjalanan Pulang">Perjalanan Pulang</option>
                 </select>
               </div>
               <div class="mb-3">
