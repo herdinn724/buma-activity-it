@@ -11,7 +11,7 @@
     <title>CRUD</title>
   </head>
   <body>
-    <h1 class="text-center mb-4" >Data Pegawai</h1>
+    <h1 class="text-center mb-4" >Daily Activity IT</h1>
 
     <div class="container">
     <a href="/tambahpegawai" type="button" class="btn btn-success">Tambah</a>
@@ -26,27 +26,28 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Nama</th>
-      <th scope="col">Jenis Kelamin</th>
+      <th scope="col">Kategori Pekerjaan</th>
       <th scope="col">No Telepon</th>
       <th scope="col">Dibuat</th>
       <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>
+  @php
+    $no = 1;
+  @endphp
     @foreach ($data as $row)
-
     <tr>
-      <th scope="row">{{ $row->id }}</th>
+      <th scope="row">{{ $no++ }}</th>
       <td>{{ $row->nama }}</td>
       <td>{{ $row->jeniskelamin }}</td>
       <td>0{{ $row->notelpon }}</td>
       <td>{{ $row->created_at->diffForHumans() }}</td>
       <td>
-        <button type="button" class="btn btn-danger">Delete</button>
-        <button type="button" class="btn btn-info">Edit</button>
+        <a href="/tampilkandata/{{ $row->id }}"  class="btn btn-info">Edit</a>
+        <a href="/delete/{{ $row->id }}" class="btn btn-danger">Delete</a> 
       </td>
     </tr>
-
     @endforeach
     
   </tbody>
