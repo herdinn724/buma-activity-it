@@ -16,6 +16,11 @@
     <div class="container">
     <a href="/tambahpegawai" type="button" class="btn btn-success">Tambah</a>
         <div class="row">
+          @if ($message = Session::get('success'))
+          <div class="alert alert-success" role="alert">
+            {{ $message }}
+          </div>
+          @endif
         <table class="table">
   <thead>
     <tr>
