@@ -18,7 +18,8 @@
           <div class="col-8">
           <div class="card">
             <div class="card-body">
-             <form>
+             <form action="/insertdata" method="POST" enctype="multipart/form-data">
+              @csrf 
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -27,8 +28,8 @@
                 <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
                 <select class="form-select" aria-label="Default select example">
                   <option selected>Pilih Jenis Kelamin</option>
-                  <option value="1">Laki-laki</option>
-                  <option value="2">Perempuan</option>
+                  <option value="Cowo">Cowo</option>
+                  <option value="Cewe">Cewe</option>
                 </select>
               </div>
               <div class="mb-3">
