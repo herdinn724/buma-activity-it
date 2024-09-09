@@ -35,7 +35,7 @@
       <td>{{ $row->nama }}</td>
       <td>{{ $row->jeniskelamin }}</td>
       <td>0{{ $row->notelpon }}</td>
-      <td>{{ $row->created_at->format('D M Y') }}</td>
+      <td>{{ $row->created_at->diffForHumans() }}</td>
       <td>
         <button type="button" class="btn btn-danger">Delete</button>
         <button type="button" class="btn btn-info">Edit</button>
