@@ -14,7 +14,7 @@
     <h1 class="text-center mb-4" >Data Pegawai</h1>
 
     <div class="container">
-    <button type="button" class="btn btn-success">Tambah</button>
+    <a href="/tambahpegawai" type="button" class="btn btn-success">Tambah</a>
         <div class="row">
         <table class="table">
   <thead>
@@ -23,6 +23,7 @@
       <th scope="col">Nama</th>
       <th scope="col">Jenis Kelamin</th>
       <th scope="col">No Telepon</th>
+      <th scope="col">Dibuat</th>
       <th scope="col">Aksi</th>
     </tr>
   </thead>
@@ -33,7 +34,8 @@
       <th scope="row">{{ $row->id }}</th>
       <td>{{ $row->nama }}</td>
       <td>{{ $row->jeniskelamin }}</td>
-      <td>{{ $row->notelpon }}</td>
+      <td>0{{ $row->notelpon }}</td>
+      <td>{{ $row->created_at->format('D M Y') }}</td>
       <td>
         <button type="button" class="btn btn-danger">Delete</button>
         <button type="button" class="btn btn-info">Edit</button>
