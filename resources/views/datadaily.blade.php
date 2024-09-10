@@ -14,7 +14,7 @@
     <h1 class="text-center mb-4" >Daily Activity IT</h1>
 
     <div class="container">
-    <a href="/tambahpegawai" type="button" class="btn btn-success">Tambah</a>
+    <a href="/tambahdaily" type="button" class="btn btn-success">Tambah</a>
         <div class="row">
           @if ($message = Session::get('success'))
           <div class="alert alert-success" role="alert">
@@ -24,10 +24,10 @@
         <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nama</th>
+      <th scope="col">No</th>
+      <th scope="col">Nama Pekerja</th>
       <th scope="col">Kategori Pekerjaan</th>
-      <th scope="col">No Telepon</th>
+      <th scope="col">No Unit</th>
       <th scope="col">Dibuat</th>
       <th scope="col">Aksi</th>
     </tr>
@@ -39,9 +39,9 @@
     @foreach ($data as $row)
     <tr>
       <th scope="row">{{ $no++ }}</th>
-      <td>{{ $row->nama }}</td>
-      <td>{{ $row->jeniskelamin }}</td>
-      <td>0{{ $row->notelpon }}</td>
+      <td>{{ $row->namapekerja }}</td>
+      <td>{{ $row->kategoripekerjaan }}</td>
+      <td>0{{ $row->nounit }}</td>
       <td>{{ $row->created_at->diffForHumans() }}</td>
       <td>
         <a href="/tampilkandata/{{ $row->id }}"  class="btn btn-info">Edit</a>

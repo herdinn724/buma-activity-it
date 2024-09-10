@@ -9,16 +9,16 @@ class EmployeeController extends Controller
 {
     public function index(){
         $data = Employee::all();
-        return view('datapegawai', compact('data'));
+        return view('datadaily', compact('data'));
     }
-    public function tambahpegawai(){
+    public function tambahdaily(){
         return view('tambahdata');
     }
 
     public function insertdata(Request $request) {
         // dd($request->all());
         Employee::create($request->all());
-        return redirect()->route('pegawai')->with('success', 'Data Berhasil Di tambahkan');
+        return redirect()->route('daily')->with('success', 'Data Berhasil Di tambahkan');
     }
 
     public function tampilkandata($id) {
@@ -30,13 +30,13 @@ class EmployeeController extends Controller
     public function updatedata(Request $request, $id){
         $data = Employee::find($id);
         $data->update($request->all());
-        return redirect()->route('pegawai')->with('success', 'Data Berhasil Di Update');
+        return redirect()->route('daily')->with('success', 'Data Berhasil Di Update');
     }
 
     public function delete($id){
         $data = Employee::find($id);
         $data->delete();
-        return redirect()->route('pegawai')->with('success', 'Data Berhasil Di Hapus');
+        return redirect()->route('daily')->with('success', 'Data Berhasil Di Hapus');
     }
 
 }

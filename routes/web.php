@@ -8,10 +8,10 @@ Route::get('/', function () {
 });
 
 // halamanpertama
-Route::get('/pegawai', [EmployeeController::class, 'index'])->name('pegawai');
+Route::get('/daily', [EmployeeController::class, 'index'])->name('daily');
 
 // halamanpegawai
-Route::get('/tambahpegawai', [EmployeeController::class, 'tambahpegawai'])->name('tambahpegawai');
+Route::get('/tambahdaily', [EmployeeController::class, 'tambahdaily'])->name('tambahdaily');
 
 // tambah data
 Route::post('/insertdata', [EmployeeController::class, 'insertdata'])->name('insertdata');

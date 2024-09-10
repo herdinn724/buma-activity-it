@@ -11,7 +11,7 @@
     <title>Daily Activity IT</title>
   </head>
   <body>
-    <h1 class="text-center mb-4" >Edit Data Pegawai</h1>
+    <h1 class="text-center mb-4" >Edit Data Daily</h1>
 
     <div class="container">
         <div class="row justify-content-center">
@@ -22,12 +22,12 @@
               @csrf 
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
-                <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->nama }}">
+                <input type="text" name="namapekerja" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->namapekerja }}">
               </div>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
-                <select class="form-select" name="jeniskelamin" aria-label="Default select example">
-                  <option selected>{{ $data->jeniskelamin }}</option>
+                <label for="exampleInputEmail1" class="form-label">Kategori Pekerjaan</label>
+                <select class="form-select" name="kategoripekerjaan" aria-label="Default select example">
+                  <option selected>{{ $data->kategoripekerjaan }}</option>
                   <option value="PM Check">PM Check</option>
                   <option value="Troubleshooting">Troubleshooting</option>
                   <option value="Instalasi">Instalasi</option>
@@ -37,8 +37,8 @@
                 </select>
               </div>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">No Telepon</label>
-                <input type="number" name="notelpon" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->notelpon }}">
+                <label for="exampleInputEmail1" class="form-label">No Unit</label>
+                <input type="number" name="nounit" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->nounit }}">
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>

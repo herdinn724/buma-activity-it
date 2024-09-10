@@ -21,12 +21,12 @@
              <form action="/insertdata" method="POST" enctype="multipart/form-data">
               @csrf 
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
-                <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="exampleInputEmail1" class="form-label">Nama Pekerja</label>
+                <input type="text" name="namapekerja" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               </div>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Kategori Pekerjaan</label>
-                <select class="form-select" name="jeniskelamin" aria-label="Default select example">
+                <select class="form-select" name="kategoripekerjaan" aria-label="Default select example">
                   <option selected>Pilih Kategori Pekerjaan</option>
                   <option value="PMCheck">PM Check</option>
                   <option value="Troubleshooting">Troubleshooting</option>
@@ -37,8 +37,8 @@
                 </select>
               </div>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">No Telepon</label>
-                <input type="number" name="notelpon" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="exampleInputEmail1" class="form-label">No Unit</label>
+                <input type="number" name="nounit" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
