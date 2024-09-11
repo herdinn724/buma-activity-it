@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Employee;
+use App\Models\Daily;
 use Illuminate\Http\Request;
 
-class EmployeeController extends Controller
+class DailyController extends Controller
 {
     public function index(){
-        $data = Employee::all();
+        $data = Daily::all();
         return view('datadaily', compact('data'));
     }
     public function tambahdaily(){
@@ -17,24 +17,24 @@ class EmployeeController extends Controller
 
     public function insertdata(Request $request) {
         // dd($request->all());
-        Employee::create($request->all());
+        Daily::create($request->all());
         return redirect()->route('daily')->with('success', 'Data Berhasil Di tambahkan');
     }
 
     public function tampilkandata($id) {
-        $data = Employee::find($id);    
+        $data = Daily::find($id);    
         // dd($data);
         return view('tampildata', compact('data'));
     }
 
     public function updatedata(Request $request, $id){
-        $data = Employee::find($id);
+        $data = Daily::find($id);
         $data->update($request->all());
         return redirect()->route('daily')->with('success', 'Data Berhasil Di Update');
     }
 
     public function delete($id){
-        $data = Employee::find($id);
+        $data = Daily::find($id);
         $data->delete();
         return redirect()->route('daily')->with('success', 'Data Berhasil Di Hapus');
     }
