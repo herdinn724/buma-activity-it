@@ -26,6 +26,7 @@
     <tr>
       <th scope="col">No</th>
       <th scope="col">Nama Pekerja</th>
+      <th scope="col">Foto</th>
       <th scope="col">Kategori Pekerjaan</th>
       <th scope="col">No Unit</th>
       <th scope="col">Dibuat</th>
@@ -40,6 +41,7 @@
     <tr>
       <th scope="row">{{ $no++ }}</th>
       <td>{{ $row->namapekerja }}</td>
+      <td>{{ $row->foto }}</td>
       <td>{{ $row->kategoripekerjaan }}</td>
       <td>0{{ $row->nounit }}</td>
       <td>{{ $row->created_at->diffForHumans() }}</td>

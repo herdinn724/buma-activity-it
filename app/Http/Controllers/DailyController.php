@@ -17,7 +17,12 @@ class DailyController extends Controller
 
     public function insertdata(Request $request) {
         // dd($request->all());
-        Daily::create($request->all());
+        $data = Daily::create($request->all());
+        if($request->hasFile('foto')) {
+            $request->file('foto')->move('fotoactivity/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
         return redirect()->route('daily')->with('success', 'Data Berhasil Di tambahkan');
     }
 

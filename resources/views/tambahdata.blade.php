@@ -40,6 +40,12 @@
                 <label for="exampleInputEmail1" class="form-label">No Unit</label>
                 <input type="number" name="nounit" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               </div>
+
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Foto Evident</label>
+                <input type="file" name="foto" class="form-control">
+              </div>
+
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
             </div>

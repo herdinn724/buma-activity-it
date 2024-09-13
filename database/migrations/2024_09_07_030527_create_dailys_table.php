@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('dailys', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->enum('jeniskelamin', ['PMCheck','Troubleshooting','Instalasi','Repair','Event','Perjalanan Pulang']);
-            $table->biginteger('notelpon');
+            $table->string('namapekerja');
+            $table->enum('kategoripekerjaan', ['PM Check','Troubleshooting','Instalasi','Repair','Event','Perjalanan Pulang']);
+            $table->biginteger('nounit');
+            $table->string('foto');
             $table->timestamps();
         });
     }
