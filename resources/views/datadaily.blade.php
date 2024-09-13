@@ -41,7 +41,9 @@
     <tr>
       <th scope="row">{{ $no++ }}</th>
       <td>{{ $row->namapekerja }}</td>
-      <td>{{ $row->foto }}</td>
+      <td>
+        <img src="{{ asset('fotoactivity/'.$row->foto) }}" alt="" style="width: 40px;" >
+      </td>
       <td>{{ $row->kategoripekerjaan }}</td>
       <td>0{{ $row->nounit }}</td>
       <td>{{ $row->created_at->diffForHumans() }}</td>
